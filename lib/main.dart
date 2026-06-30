@@ -212,7 +212,7 @@ class ContinueCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(34),
           boxShadow: [
             BoxShadow(
-              color: book.palette.first.withOpacity(.24),
+              color: book.palette.first.withValues(alpha: .24),
               blurRadius: 36,
               offset: const Offset(0, 22),
             ),
@@ -229,7 +229,7 @@ class ContinueCard extends StatelessWidget {
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.transparent, Colors.black.withOpacity(.52)],
+                      colors: [Colors.transparent, Colors.black.withValues(alpha: .52)],
                     ),
                   ),
                 ),
@@ -253,7 +253,7 @@ class ContinueCard extends StatelessWidget {
                     const SizedBox(height: 8),
                     Text(
                       '${book.author}  |  ${book.minutesLeft} min left',
-                      style: TextStyle(color: Colors.white.withOpacity(.78), fontSize: 14),
+                      style: TextStyle(color: Colors.white.withValues(alpha: .78), fontSize: 14),
                     ),
                     const SizedBox(height: 18),
                     ProgressLine(value: book.progress, color: Colors.white),
@@ -282,12 +282,12 @@ class BookTile extends StatelessWidget {
         height: 132,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(.62),
+          color: Colors.white.withValues(alpha: .62),
           borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: Colors.white.withOpacity(.72)),
+          border: Border.all(color: Colors.white.withValues(alpha: .72)),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(.06),
+              color: Colors.black.withValues(alpha: .06),
               blurRadius: 28,
               offset: const Offset(0, 16),
             ),
@@ -349,7 +349,7 @@ class ReaderScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(34),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(.07),
+                        color: Colors.black.withValues(alpha: .07),
                         blurRadius: 38,
                         offset: const Offset(0, 24),
                       ),
@@ -435,7 +435,7 @@ class PlaceholderScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 56, color: const Color(0xFF2B2B2D).withOpacity(.7)),
+            Icon(icon, size: 56, color: const Color(0xFF2B2B2D).withValues(alpha: .7)),
             const SizedBox(height: 18),
             Text(title, style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700)),
             const SizedBox(height: 8),
@@ -469,9 +469,9 @@ class LiquidBottomBar extends StatelessWidget {
           height: 72,
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(.42),
+            color: Colors.white.withValues(alpha: .42),
             borderRadius: BorderRadius.circular(30),
-            border: Border.all(color: Colors.white.withOpacity(.7)),
+            border: Border.all(color: Colors.white.withValues(alpha: .7)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -485,7 +485,7 @@ class LiquidBottomBar extends StatelessWidget {
                       curve: Curves.easeOutCubic,
                       margin: const EdgeInsets.symmetric(horizontal: 4),
                       decoration: BoxDecoration(
-                        color: selectedIndex == i ? Colors.white.withOpacity(.72) : Colors.transparent,
+                        color: selectedIndex == i ? Colors.white.withValues(alpha: .72) : Colors.transparent,
                         borderRadius: BorderRadius.circular(23),
                       ),
                       child: Center(
@@ -525,15 +525,15 @@ class BookCover extends StatelessWidget {
           Positioned(
             right: -28,
             top: -28,
-            child: CircleAvatar(radius: 76, backgroundColor: Colors.white.withOpacity(.14)),
+            child: CircleAvatar(radius: 76, backgroundColor: Colors.white.withValues(alpha: .14)),
           ),
           Positioned(
             left: -22,
             bottom: -28,
-            child: CircleAvatar(radius: 58, backgroundColor: Colors.white.withOpacity(.12)),
+            child: CircleAvatar(radius: 58, backgroundColor: Colors.white.withValues(alpha: .12)),
           ),
           Center(
-            child: Icon(book.symbol, color: Colors.white.withOpacity(.86), size: 48),
+            child: Icon(book.symbol, color: Colors.white.withValues(alpha: .86), size: 48),
           ),
         ],
       ),
@@ -559,9 +559,9 @@ class GlassButton extends StatelessWidget {
             width: 52,
             height: 52,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(.48),
+              color: Colors.white.withValues(alpha: .48),
               borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: Colors.white.withOpacity(.72)),
+              border: Border.all(color: Colors.white.withValues(alpha: .72)),
             ),
             child: Icon(icon, color: const Color(0xFF25262A)),
           ),
@@ -585,9 +585,9 @@ class GlassPill extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(.22),
+            color: Colors.white.withValues(alpha: .22),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white.withOpacity(.32)),
+            border: Border.all(color: Colors.white.withValues(alpha: .32)),
           ),
           child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
         ),
@@ -610,7 +610,7 @@ class ProgressLine extends StatelessWidget {
         value: value,
         minHeight: 6,
         color: color,
-        backgroundColor: color.withOpacity(.18),
+        backgroundColor: color.withValues(alpha: .18),
       ),
     );
   }
